@@ -7,7 +7,7 @@ public class EjemplosArreglos {
         int i = numeros[0];
         int j = numeros[1];
         int k = numeros[2];
-        int l = numeros[3];
+        int l = numeros[3]; // es igual a numero[numero.length -1]
 
         System.out.println("l = " + l);
         System.out.println("k = " + k);
