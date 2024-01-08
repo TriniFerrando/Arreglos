@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class EjemplosArreglosCrearUnArrayConValoresDeOtraArray {
     public static void main(String[] args) {
         int[] numeros = new int[10];
@@ -31,6 +33,14 @@ public class EjemplosArreglosCrearUnArrayConValoresDeOtraArray {
         for (int i = 0; i < b.length; i++) {
             System.out.println("Array b i= " + i + " valor: " + b[i]);
 
+        }
+
+        System.out.println("\n");
+        Arrays.sort(b);
+        for (int i = 0; i < b.length; i++) {
+            if (b[i] % 2 == 0) {
+                System.out.println("Array b i= " + i + " valor: " + b[i]);
+            }
         }
 
 
