@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class EjemploArrelgosDeplazarUnaPosición {
+    public static void main(String[] args) {
+        int[] num = new int[5];
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese un número:");
+        for(int i =0; i<num.length; i++){
+            num[i]= scanner.nextInt();
+        }
+
+        System.out.println();
+        int ultimoNumero= num[num.length-1];
+        for(int i=num.length-2; i>= 0; i--){
+            num[i+1]= num[i];
+        }
+        num[0]=ultimoNumero;
+
+        System.out.println("Arreglo desplazado una posición");
+        for(int i=0; i<num.length;i++){
+            System.out.println("Posición "+ i + " tiene al " +num[i]);
+        }
+
+    }
+}
