@@ -15,9 +15,41 @@ Para la tarea usaremos el asterisco(*) como representación gráfica para el his
  */
 
 
+import java.util.Scanner;
+
 public class PracticaImprimirHistograma {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a[]=new int[12];
+        int i = 0;
 
+        while(i < a.length){
+            System.out.println("Ingrese un numero del 1 al 6: ");
+            int num = scanner.nextInt();
+            if(num >= 1 && num <=6){
+                a[i]=num;
+                i++;
+            } else{
+                System.out.println("Error, numero fuera del rango permitido.");
+            }
+        }
+
+        String[] nuevoValor = new String[6];
+
+        for(i=0; i< nuevoValor.length; i++){
+            int aux=i +1;
+            String histograma = aux + ":";
+            for(int j=0; j<a.length;j++){
+                if(aux==a[j]){
+                    histograma += "*";
+                }
+            }
+           nuevoValor[i]=histograma;
+        }
+
+        for(i=0; i<nuevoValor.length;i++){
+            System.out.println(nuevoValor[i]);
+        }
 
 
 
